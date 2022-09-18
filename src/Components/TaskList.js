@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Task from "./Task";
 import TaskForm from "./TaskForm";
+import { v4 as uuidv4 } from "uuid";
 
 const TaskList = () => {
   const [taskList, setTaskList] = useState([]);
@@ -20,12 +21,24 @@ const TaskList = () => {
         ...prev,
         {
           id: prev.length + 1,
-          title: titleProp,
-          description: descriptionProp,
+          id_v4: uuidv4(),
+          title: titleProp.trim(),
+          description: descriptionProp.trim(),
           active: true,
+          completed: true,
         },
       ];
     });
+  };
+
+  const completedTask = (id) => {
+    const updatedTasks = taskList.map((task) => {
+      if (task.id === id) {
+        task.completed = !task.completed;
+      }
+      return task;
+    });
+    setTaskList(updatedTasks);
   };
 
   return (
@@ -43,7 +56,9 @@ const TaskList = () => {
                       title={task.title}
                       description={task.description}
                       active={task.active}
+                      completed={task.completed}
                       handleClick={handleClick}
+                      completedTask={completedTask}
                     />
                   </div>
                 );

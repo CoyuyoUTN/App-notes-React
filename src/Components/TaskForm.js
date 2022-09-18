@@ -15,6 +15,9 @@ const TaskForm = ({ handleDats }) => {
             setTitle("");
           } else {
             handleDats(title, description);
+            setDescription("");
+            setTitle("");
+            ev.target.reset();
           }
         }}
       >
@@ -28,7 +31,6 @@ const TaskForm = ({ handleDats }) => {
               setTitle(ev.target.value);
             }}
             autoComplete="off"
-            required
           />
           <span>Title</span>
         </div>
@@ -42,7 +44,6 @@ const TaskForm = ({ handleDats }) => {
               setDescription(ev.target.value);
             }}
             autoComplete="off"
-            required
           />
           <span>Description</span>
         </div>

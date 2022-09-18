@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App-container">
       <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8oqKzAytY0Bn5EQGADYghsism-9fYNs0SZw&usqp=CAU"
+        src="https://cdn2.iconfinder.com/data/icons/social-media-8/512/note3.png"
         className="note"
         alt=""
       />

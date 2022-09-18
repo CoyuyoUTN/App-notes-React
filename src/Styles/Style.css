@@ -55,8 +55,10 @@ table {
 .App-container{
     width: 100%;
     min-height: 100vh;
-    background: rgb(219,226,131);
-    background: linear-gradient(180deg, rgba(219,226,131,1) 0%, rgba(153,240,108,1) 100%);
+    background: url("https://static.vecteezy.com/system/resources/previews/001/925/378/non_2x/clear-sky-in-summer-free-photo.jpg");
+   background-position:center;
+   background-repeat: no-repeat;
+   background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -78,14 +80,14 @@ table {
     align-items: center;
     min-width: 20%;
     min-height: 35%;
-    background: #fff;
+    background: #E3FDFD;
     border-radius: 10px;
     box-sizing: border-box;
     padding: 5px;
   }
   .center h1 {
     font-size: 2em;
-    border-left: 5px solid dodgerblue;
+    border-left: 5px solid #71C9CE;
     padding: 10px;
     color: #000;
     letter-spacing: 5px;
@@ -133,19 +135,19 @@ table {
   
   .center .inputbox [type="submit"] {
     width: 50%;
-    background: dodgerblue;
-    color: #fff;
+    background: #A6E3E9;
+    color: rgb(0, 0, 0);
     border: #fff;
+    font-weight: 400;
   }
   .center .inputbox:hover [type="submit"] {
-    background: linear-gradient(45deg, greenyellow, dodgerblue);
+    background: linear-gradient(45deg, #E3FDFD, #71C9CE);
   }
   
 
 .ticket-containet{
   width: 80%;
   height: 120px;
-  border: 3px solid rgb(2, 74, 22);
   margin-top: 25px;
   display: flex;
   flex-direction: column;
@@ -169,13 +171,22 @@ font-weight: 300;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  caret-color:transparent;
+}
+
+.card-completed{
+  background: radial-gradient(#ea4444, #ee1616);
+  text-decoration: line-through;
+  text-decoration-color: #fff ;
+  text-decoration-style: wavy;
+  overflow:hidden
 }
 
 .card {
   margin: 20px;
   padding: 20px;
-  width: 500px;
-  min-height: 200px;
+  width: 350px;
+  min-height: 120px;
   display: grid;
   grid-template-rows: 20px 50px 1fr 50px;
   border-radius: 10px;
@@ -215,18 +226,19 @@ font-weight: 300;
   grid-row: 1/2;
   justify-self: end;
   
+  
 }
 
 button{
-  background-color:rgb(93, 181, 181);
+  background-color:transparent;
   border: none;
-  font-size: 15px;
-  font-weight: 800;
+  font-size: 25px;
   border-radius: 50%;
+  padding: 8px;
 }
 
 button:hover{
-  background-color: rgb(0, 0, 0);
+  cursor: pointer;
   color: #fff;
 }
 .card__icon {
@@ -240,12 +252,15 @@ button:hover{
   font-size: 40px;
   text-decoration:overline ;
   color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .card-description{
   color: #fff;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 300;
+  padding-top: 20px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .card__apply {
@@ -254,7 +269,7 @@ button:hover{
 }
 
 .card-4 {
-  background: radial-gradient(#60efbc, #58d5c9);
+  background: radial-gradient(#61e665, #12ff1a);
 }
 
 @media (max-width: 1600px) {
@@ -268,4 +283,11 @@ button:hover{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.completed-button{
+  grid-row: 5/5;
+  justify-self: end;
+font-size: 30px;
+
 }
