@@ -27,6 +27,7 @@ const TaskForm = ({ handleDats }) => {
             name="title"
             type="title"
             value={title}
+            maxLength="15"
             onChange={(ev) => {
               setTitle(ev.target.value);
             }}
@@ -40,6 +41,7 @@ const TaskForm = ({ handleDats }) => {
             name="task"
             type="task"
             value={description}
+            maxLength="50"
             onChange={(ev) => {
               setDescription(ev.target.value);
             }}

@@ -51,18 +51,18 @@ table {
 
 
 
-
 .App-container{
     width: 100%;
     min-height: 100vh;
     background: url("https://static.vecteezy.com/system/resources/previews/001/925/378/non_2x/clear-sky-in-summer-free-photo.jpg");
-   background-position:center;
+   background-position:top;
    background-repeat: no-repeat;
    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+   
 }
 
 .note{
@@ -172,6 +172,8 @@ font-weight: 300;
   flex-wrap: wrap;
   justify-content: space-between;
   caret-color:transparent;
+
+ 
 }
 
 .card-completed{
@@ -179,19 +181,24 @@ font-weight: 300;
   text-decoration: line-through;
   text-decoration-color: #fff ;
   text-decoration-style: wavy;
-  overflow:hidden
+  word-wrap: break-word;
+  word-break: break-all;
+
+  
 }
 
 .card {
   margin: 20px;
   padding: 20px;
   width: 350px;
-  min-height: 120px;
+  height: auto;
   display: grid;
   grid-template-rows: 20px 50px 1fr 50px;
   border-radius: 10px;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
   transition: all 0.2s;
+
+  
 }
 
 .card:hover {
@@ -261,6 +268,7 @@ button:hover{
   font-weight: 300;
   padding-top: 20px;
   font-family: 'Courier New', Courier, monospace;
+  padding: 3px;
 }
 
 .card__apply {
@@ -270,6 +278,8 @@ button:hover{
 
 .card-4 {
   background: radial-gradient(#61e665, #12ff1a);
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 @media (max-width: 1600px) {
@@ -289,5 +299,6 @@ button:hover{
   grid-row: 5/5;
   justify-self: end;
 font-size: 30px;
+
 
 }
